@@ -1,0 +1,57 @@
+$background-color: #c3cfe2;
+
+@mixin box-style {
+    border-radius: 15px;
+    box-shadow: 1px 8px 15px 1px rgba(0,0,0,0.5), 1px 8px 15px 1px rgba(0,0,0,0.5); 
+}
+@mixin text-style {
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 25px;
+    line-height: 2em;
+}
+
+@mixin align-grid {
+    display: flex;
+    justify-content: center;
+}
+@mixin button {
+    @include text-style;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    border: none;
+    color: black;
+    padding:10px;
+    border-radius: 15px;
+    background-color: #686de0;
+    cursor: pointer;
+}
+@mixin button-hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration: 250ms;
+    color: white;
+}
+
+@mixin  container-size {
+    position: relative;
+    background-color: bisque;
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+}
+@mixin img-size{
+    position: absolute;
+        width: 100%;
+        height: auto;
+}
+@mixin slide-hide {
+    width: 300px;
+    transform: translateX(280px);
+}
+@mixin slide-hover {
+    transform: translateX(80px);
+    transition-duration: 500ms;
+}
